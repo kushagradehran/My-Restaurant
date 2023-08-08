@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RecordService } from './service/record.service';
 import { Subscription } from 'rxjs';
 
@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   constructor(private r1:RecordService){}
   subscription:Subscription= new Subscription();
   showLogin=true;

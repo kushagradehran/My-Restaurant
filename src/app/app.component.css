@@ -29,3 +29,7 @@
     border-top: solid black;
     border-radius: 10px;
 }
+
+.showdropdown{
+    display: block !important;
+}

@@ -12,6 +12,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { UpdatemenuComponent } from './updatemenu/updatemenu.component';
 import { InsertmenuComponent } from './insertmenu/insertmenu.component';
+import { CommonModule } from '@angular/common';
+import { ShowmenuComponent } from './showmenu/showmenu.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { InsertmenuComponent } from './insertmenu/insertmenu.component';
     LoggedinComponent,
     DeletemenuComponent,
     UpdatemenuComponent,
-    InsertmenuComponent
+    InsertmenuComponent,
+    ShowmenuComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { InsertmenuComponent } from './insertmenu/insertmenu.component';
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

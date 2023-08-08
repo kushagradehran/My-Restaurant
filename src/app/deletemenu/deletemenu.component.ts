@@ -14,25 +14,16 @@ export class DeletemenuComponent {
   ngOnit():void{}
 
   deletedish(deleteform:NgForm){
-    this.s1.deleteservice(deleteform.value).subscribe(res=>{
-      if(res==='not found'){
-        alert("Record Not Found!");
-        deleteform.reset();
-      }
-      else{
-        alert("Delete Successfully!");
-        deleteform.reset();
-      }
-    },error=>{
-      if(error.error.text==="not found"){
-        alert("Record Not Found!");
-        deleteform.reset();
-      }
-      else{
-        alert("Delete Successfully!");
-        deleteform.reset();
-      }
-    });
+    this.s1.deleteservice(deleteform.value).subscribe(
+      result => {
+        if(result) {
+          alert("Record Deleted Successfully!");
+          deleteform.reset();
+        }
+  },error=>{
+    if(error.error.error==="Not Found"){
+      alert("Record Not Found");
+    }
+  });
   }
-
 }

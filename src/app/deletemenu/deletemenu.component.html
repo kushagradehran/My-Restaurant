@@ -5,7 +5,7 @@
         <br><br>
         <h2 id="head">Enter the Dish Id you want to Delete</h2><br>
           <div class="myform form ">
-             <form action="" method="post" name="login" #deleteform="ngForm" (ngSubmit)="deletedish(deleteform)">
+             <form method="delete" name="login" #deleteform="ngForm" (ngSubmit)="deletedish(deleteform)">
                 <div class="form-group">
                    <input type="text" name="dishid" required class="form-control my-input" id="name" placeholder="Type the Dish Id for which you want to edit the details."#dishid (ngModel)="dishid">
                 </div><br>
@@ -21,7 +21,6 @@
                 <div class="form-group">
                    <a class="btn btn-block g-button" routerLink="/loggedin" routerLinkActive="active">You want to perform any other operation?</a>
                    <br>
-                   <a class="btn btn-block g-button" routerLink="/showmenu" routerLinkActive="active">No that's it as of now.</a>
                 </div>
              </form>
           </div>

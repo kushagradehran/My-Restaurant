@@ -8,7 +8,7 @@ import { DishService } from '../service/dish.service';
 })
 export class ShowmenuComponent implements OnInit {
 
-  data!: any[];
+  data: any=[];
 
   constructor(private s1 : DishService){}
 
