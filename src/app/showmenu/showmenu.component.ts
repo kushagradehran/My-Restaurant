@@ -6,15 +6,16 @@ import { DishService } from '../service/dish.service';
   templateUrl: './showmenu.component.html',
   styleUrls: ['./showmenu.component.css']
 })
-export class ShowmenuComponent {
+export class ShowmenuComponent implements OnInit {
 
-  data:any;
+  data!: any[];
 
   constructor(private s1 : DishService){}
 
   ngOnInit():void{
-    let response = this.s1.viewservice();
-    response.subscribe((data1)=>this.data=data1);
+    this.s1.viewservice().subscribe(res=>{
+      this.data = res;
+    })
   }
 
 }

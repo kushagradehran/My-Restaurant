@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class DishService {
 
   inserturl = "http://localhost:9009/insertdish"
   updateurl = "http://localhost:9009/updatedish"
-  deleteurl = "http://localhost:9009/deletedish"
+  deleteurl = "http://localhost:9009/deletedish/"
   viewurl = "http://localhost:9009/viewdish"
 
   constructor(private h1 : HttpClient) { }
@@ -22,10 +23,10 @@ export class DishService {
   }
 
   deleteservice(data:any){
-    return this.h1.post(this.deleteurl,data);
+    return this.h1.delete(this.deleteurl+ data.dishid);
   }
 
-  viewservice(){
-    return this.h1.get(this.viewurl);
+  viewservice(): Observable<any[]>{
+    return this.h1.get<any[]>(this.viewurl);
   }
 }

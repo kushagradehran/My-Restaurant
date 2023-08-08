@@ -1,5 +1,6 @@
 import { Component , OnInit} from '@angular/core';
 import { DishService } from '../service/dish.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-deletemenu',
@@ -12,8 +13,26 @@ export class DeletemenuComponent {
 
   ngOnit():void{}
 
-  deletedish(deleteform:{value:any;}){
-    return this.s1.deleteservice(deleteform.value).subscribe();
+  deletedish(deleteform:NgForm){
+    this.s1.deleteservice(deleteform.value).subscribe(res=>{
+      if(res==='not found'){
+        alert("Record Not Found!");
+        deleteform.reset();
+      }
+      else{
+        alert("Delete Successfully!");
+        deleteform.reset();
+      }
+    },error=>{
+      if(error.error.text==="not found"){
+        alert("Record Not Found!");
+        deleteform.reset();
+      }
+      else{
+        alert("Delete Successfully!");
+        deleteform.reset();
+      }
+    });
   }
 
 }

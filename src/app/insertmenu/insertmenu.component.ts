@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DishService } from '../service/dish.service';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-insertmenu',
@@ -8,12 +10,18 @@ import { DishService } from '../service/dish.service';
 })
 export class InsertmenuComponent {
 
-  constructor(private s1:DishService){}
-
+  constructor(private s1:DishService, private router:Router){}
   ngOnit():void{}
 
-  insertdish(insertform:{value:any;}){
-    return this.s1.insertservice(insertform.value).subscribe();
+  insertdish(insertform:NgForm){
+     this.s1.insertservice(insertform.value).subscribe(res=>{
+      if(Object.keys(res).length>0){
+        alert('Data Saved Successfully')
+        insertform.reset();
+      }
+    });
   }
-
+  onClick(form:any){
+    console.log(form)
+  }
 }

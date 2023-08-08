@@ -7,16 +7,16 @@
           <div class="myform form ">
              <form method="post" name="login" #updateform="ngForm" (ngSubmit)="updatedish(updateform)">
                 <div class="form-group">
-                   <input type="text" name="dishid"  class="form-control my-input" id="name" placeholder="Type the Dish Id for which you want to edit the details." #dishid (ngModel)="dishid">
+                   <input type="number" name="dishid" required class="form-control my-input" id="name" placeholder="Type the Dish Id for which you want to edit the details." #dishid (ngModel)="dishid">
                 </div><br>
                 <div class="form-group">
-                   <input type="email" name="dishname"  class="form-control my-input" id="email" placeholder="Type the Updated Name/Current Name of the Dish." #dishname (ngModel)="dishname">
+                   <input type="text" name="dishname" required class="form-control my-input" id="email" placeholder="Type the Updated Name/Current Name of the Dish." #dishname (ngModel)="dishname">
                 </div><br>
                 <div class="form-group">
-                   <input type="number" min="0" name="dishprice" id="phone"  class="form-control my-input" placeholder="Type the Updated Price/Current Price of the Dish." #dishprice (ngModel)="dishprice">
+                   <input type="number" min="0" name="dishprice" required id="phone"  class="form-control my-input" placeholder="Type the Updated Price/Current Price of the Dish." #dishprice (ngModel)="dishprice">
                 </div><br>
                 <div class="text-center ">
-                   <button type="submit" class=" btn btn-block send-button tx-tfm">Update the Dish details into the Menu</button>
+                   <button type="submit" [disabled]="updateform.form.status==='INVALID'" class=" btn btn-block send-button tx-tfm">Update the Dish details into the Menu</button>
                 </div>
                 <div class="col-md-12 ">
                    <div class="login-or">

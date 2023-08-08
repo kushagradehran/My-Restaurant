@@ -27,6 +27,8 @@ export class LoginComponent implements OnInit {
     if (response == true) {
       console.warn('you are here')
      this.router.navigate(['/loggedin']);
+     this.r1.invokeExecuteAction({action:'Login'});
+
     }
     else {
       this.router.navigate(['/notloggedin']);

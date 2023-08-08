@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DishService } from '../service/dish.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-updatemenu',
@@ -12,8 +13,13 @@ export class UpdatemenuComponent {
 
   ngOnit():void{}
 
-  updatedish(updateform:{value:any;}){
-    return this.s1.updateservice(updateform.value).subscribe();
+  updatedish(updateform:NgForm){
+    this.s1.updateservice(updateform.value).subscribe(res=>{
+      if(Object.keys(res).length>0){
+        alert('Data Updated Successfully');
+        updateform.reset();
+      }
+    });
   }
 
 }

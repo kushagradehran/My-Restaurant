@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           
-          <h3 id="h"> <i><b>My-Resturant</b></i> </h3> &nbsp; &nbsp; &nbsp;
+          <h3 id="h"> <i><b>My-Restaurant</b></i> </h3> &nbsp; &nbsp; &nbsp;
           
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -22,8 +22,8 @@
               </li>
             </ul>
               <h6><b>Are you an Admin?</b></h6> &nbsp; &nbsp; &nbsp;
-              <button class="btn btn-outline-success" type="submit"><a routerLink="/login" routerLinkActive="active">Login</a></button>
-            
+              <button *ngIf="showLogin" class="btn btn-outline-success" type="submit"><a routerLink="/login" routerLinkActive="active">Login</a></button>
+              <button *ngIf="showLogout" class="btn btn-outline-success" type="submit"><a routerLink="/login" routerLinkActive="active" (click)="showLogin=true;showLogout=false;">Logout</a></button>
           </div>
         </div> 
       </nav>
@@ -43,10 +43,10 @@
       <div class="container p-4">
         <div class="row mt-4">
           <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">About Philtre The Bistro</h5>
+            <h5 class="text-uppercase mb-4">About My Restaurant</h5>
   
             <p>
-              Philtre The Bistro - A New American restaurant serving a rustic, seasonal menu inspired by the bounty and beauty of the Finger lakes region. 
+              My Restaurant - A New Indian restaurant serving a rustic, seasonal menu inspired by the bounty and beauty of the Finger lakes region. 
             </p>
   
             <p>
@@ -63,13 +63,13 @@
   
             <ul class="fa-ul" style="margin-left: 1.65em;">
               <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Warsaw, 00-967, San Francisco, CA, USA</span>
+                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">GIP, 00-967, Noida-18, UP, India</span>
               </li>
               <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">admin@philtrethebistro.com</span>
+                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">admin@MyRestaurant.com</span>
               </li>
               <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 1 234-5677-88</span>
+                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 91 234-5677-88</span>
               </li>
             </ul>
           </div>
@@ -97,7 +97,7 @@
         </div>
       </div>
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2022 Copyright
+        © 2023 Copyright
       </div>
     </footer>
   </div>
