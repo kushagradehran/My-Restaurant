@@ -1,0 +1,22 @@
+<div class="top">
+  <h2>Welcome to Philtre The Bistro....!</h2>
+  <h3>---------------Menu---------------</h3>
+</div>
+<div align="center" class="main">
+  <table class="table table-striped">
+    <thead> 
+      <tr>
+        <th scope="col">Dish Id</th>
+        <th scope="col">Dish Name</th>
+        <th scope="col">Dish Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of data">
+        <td>{{d.dishid}}</td>
+        <td>{{d.dishname}}</td>
+        <td>{{d.dishprice}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

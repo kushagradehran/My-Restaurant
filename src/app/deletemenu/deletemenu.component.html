@@ -1,0 +1,33 @@
+
+<div class="containerf">
+    <div class="rowf">
+       <div class="col-md-4 mx-auto">
+        <br><br>
+        <h2 id="head">Enter the Dish Id you want to Delete</h2><br>
+          <div class="myform form ">
+             <form action="" method="post" name="login" #deleteform="ngForm" (ngSubmit)="deletedish(deleteform)">
+                <div class="form-group">
+                   <input type="text" name="dishid"  class="form-control my-input" id="name" placeholder="Type the Dish Id for which you want to edit the details."#dishid (ngModel)="dishid">
+                </div><br>
+                <div class="text-center ">
+                   <button type="submit" class=" btn btn-block send-button tx-tfm">Delete Dish from Menu.</button>
+                </div>
+                <div class="col-md-12 ">
+                   <div class="login-or">
+                      <hr class="hr-or">
+                      <span class="span-or">or</span>
+                   </div>
+                </div>
+                <div class="form-group">
+                   <a class="btn btn-block g-button" routerLink="/loggedin" routerLinkActive="active">You want to perform any other operation?</a>
+                   <br>
+                   <a class="btn btn-block g-button" routerLink="/showmenu" routerLinkActive="active">No that's it as of now.</a>
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+  

@@ -1,0 +1,104 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          
+          <h3 id="h"> <i><b>My-Resturant</b></i> </h3> &nbsp; &nbsp; &nbsp;
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/showmenu" routerLinkActive="active">Show Menu</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Admin Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" routerLink="/login" routerLinkActive="active">Insert Dish</a></li>
+                  <li><a class="dropdown-item" routerLink="/login" routerLinkActive="active">Update Dish</a></li>
+                  <li><a class="dropdown-item" routerLink="/login" routerLinkActive="active">Delete Dish</a></li>
+                  <li><a class="dropdown-item" routerLink="/showmenu" routerLinkActive="active">Show Menu</a></li>
+                </ul>
+              </li>
+            </ul>
+              <h6><b>Are you an Admin?</b></h6> &nbsp; &nbsp; &nbsp;
+              <button class="btn btn-outline-success" type="submit"><a routerLink="/login" routerLinkActive="active">Login</a></button>
+            
+          </div>
+        </div> 
+      </nav>
+</div>
+<div id="image">
+    <img id="img1" aliign="center" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+</div>
+<br>
+<div id="router">
+<router-outlet></router-outlet>
+</div>
+<br>
+
+<div id="footer">
+<div class="">
+    <footer class="text-white text-center text-lg-start bg-dark">
+      <div class="container p-4">
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">About Philtre The Bistro</h5>
+  
+            <p>
+              Philtre The Bistro - A New American restaurant serving a rustic, seasonal menu inspired by the bounty and beauty of the Finger lakes region. 
+            </p>
+  
+            <p>
+              Centered around a wood fired hearth, Rose Tavern is heralded for embracing local ingredients and classic cooking techniques.
+            </p>
+  
+            
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4 pb-1">Locate Us</h5>
+  
+            
+  
+            <ul class="fa-ul" style="margin-left: 1.65em;">
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Warsaw, 00-967, San Francisco, CA, USA</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">admin@philtrethebistro.com</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 1 234-5677-88</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Opening hours</h5>
+  
+            <table class="table text-center text-white">
+              <tbody class="fw-normal">
+                <tr>
+                  <td>Mon - Thu:</td>
+                  <td>8am - 9pm</td>
+                </tr>
+                <tr>
+                  <td>Fri - Sat:</td>
+                  <td>8am - 1am</td>
+                </tr>
+                <tr>
+                  <td>Sunday:</td>
+                  <td>9am - 10pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright
+      </div>
+    </footer>
+  </div>
+</div>

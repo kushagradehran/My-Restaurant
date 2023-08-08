@@ -1,0 +1,39 @@
+
+  <div class="containerf">
+    <div class="rowf">
+       <div class="col-md-4 mx-auto">
+        <br><br>
+        <h2 id="head">Enter the details of new Dish</h2><br>
+          <div class="myform form ">
+             <form method="post" name="login" #insertform="ngForm" (ngSubmit)="insertdish(insertform)">
+                <div class="form-group">
+                   <input type="text" name="dishid"  class="form-control my-input" id="name" placeholder="Type the Id of new Dish." #dishid (ngModel)="dishid">
+                </div><br>
+                <div class="form-group">
+                   <input type="email" name="dishname"  class="form-control my-input" id="email" placeholder="Type the Name of new Dish."#dishname (ngModel)="dishname">
+                </div><br>
+                <div class="form-group">
+                   <input type="number" min="0" name="dishprice" id="phone"  class="form-control my-input" placeholder="Type the Price of new Dish."#dishprice (ngModel)="dishprice">
+                </div><br>
+                <div class="text-center ">
+                   <button type="submit" class=" btn btn-block send-button tx-tfm">Insert the Dish into the Menu</button>
+                </div>
+                <div class="col-md-12 ">
+                   <div class="login-or">
+                      <hr class="hr-or">
+                      <span class="span-or">or</span>
+                   </div>
+                </div>
+                <div class="form-group">
+                   <a class="btn btn-block g-button" routerLink="/loggedin" routerLinkActive="active">You want to perform any other operation?</a>
+                   <br>
+                   <a class="btn btn-block g-button" routerLink="/showmenu" routerLinkActive="active">No that's it as of now.</a>
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+  

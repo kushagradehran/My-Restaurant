@@ -1,0 +1,31 @@
+#image{
+    width: auto;  
+    height: 400px;
+    text-align: center;    
+    
+}
+
+#img1{
+  max-height: 400px;
+  width: 1300px;
+  border-radius: 1%;
+}
+
+#router{
+    height: auto;
+    
+}
+
+#footer{
+    border: 1px solid black;
+}
+
+.butt{
+    color: aliceblue;
+}
+
+#h{
+    border-bottom: solid black;
+    border-top: solid black;
+    border-radius: 10px;
+}
