@@ -5,11 +5,6 @@
           <h3 id="h"> <i><b>My-Restaurant</b></i> </h3> &nbsp; &nbsp; &nbsp;
           
           <div class="collapse navbar-collapse" style="justify-content: end;" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item" >
-                <a class="nav-link active" aria-current="page" routerLink="/showmenu" routerLinkActive="active">Show Menu</a>
-              </li>
-            </ul>
               <h6><b>Are you an Admin?</b></h6> &nbsp; &nbsp; &nbsp;
               <button *ngIf="showLogin" class="btn btn-outline-success" type="submit"><a routerLink="/login" routerLinkActive="active">Login</a></button>
               <button *ngIf="showLogout" class="btn btn-outline-success" type="submit"><a routerLink="/login" routerLinkActive="active" (click)="showLogin=true;showLogout=false;">Logout</a></button>
